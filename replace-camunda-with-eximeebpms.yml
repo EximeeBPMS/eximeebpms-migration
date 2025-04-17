@@ -9,21 +9,21 @@ recipeList:
       newKey: eximeebpms.version
   - org.openrewrite.maven.ChangePropertyValue:
       key: eximeebpms.version
-      newValue: 0.9.0-SNAPSHOT
+      newValue: 1.0.0
 
   - org.openrewrite.maven.RenamePropertyKey:
       oldKey: version.camunda
       newKey: version.eximeebpms
   - org.openrewrite.maven.ChangePropertyValue:
       key: version.eximeebpms
-      newValue: 0.9.0-SNAPSHOT
+      newValue: 1.0.0
 
   - org.openrewrite.maven.RenamePropertyKey:
       oldKey: version.camunda.bpm.assert
       newKey: version.eximeebpms.bpm.assert
   - org.openrewrite.maven.ChangePropertyValue:
       key: version.eximeebpms.bpm.assert
-      newValue: 0.9.0-SNAPSHOT
+      newValue: 1.0.0
 
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
