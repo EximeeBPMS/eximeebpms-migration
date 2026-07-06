@@ -8,12 +8,12 @@
     <packaging>war</packaging>
 
     <properties>
-        <camunda.version>7.22.0</camunda.version>
-        <spring.version>5.3.36</spring.version>
-        <h2.version>2.3.232</h2.version>
+        <camunda.version>7.24.0</camunda.version>
+        <spring.version>5.3.39</spring.version>
+        <h2.version>2.4.240</h2.version>
         <slf4j.version>1.7.36</slf4j.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -82,12 +82,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>3.3.2</version>
+                    <version>3.5.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.openrewrite.maven</groupId>
                     <artifactId>rewrite-maven-plugin</artifactId>
-                    <version>6.3.2</version>
+                    <version>6.42.0</version>
                     <configuration>
                         <configLocation>
                             ${maven.multiModuleProjectDirectory}/replace-camunda-with-eximeebpms.yml
