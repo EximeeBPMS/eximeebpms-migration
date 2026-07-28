@@ -28,4 +28,6 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Build
-        run: mvn -B verify
+        run: |
+          command -v mvn >/dev/null || { sudo apt-get update -q && sudo apt-get install -y maven; }
+          mvn -B verify
