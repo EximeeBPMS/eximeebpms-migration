@@ -31,3 +31,9 @@ jobs:
         run: |
           command -v mvn >/dev/null || { sudo apt-get update -q && sudo apt-get install -y maven; }
           mvn -B verify
+
+      - name: Apply migration recipe
+        run: mvn -B rewrite:run
+
+      - name: Verify migrated project builds
+        run: mvn -B verify
