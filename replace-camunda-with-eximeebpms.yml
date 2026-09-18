@@ -9,21 +9,21 @@ recipeList:
       newKey: eximeebpms.version
   - org.openrewrite.maven.ChangePropertyValue:
       key: eximeebpms.version
-      newValue: 1.3.0
+      newValue: 1.4.0
 
   - org.openrewrite.maven.RenamePropertyKey:
       oldKey: version.camunda
       newKey: version.eximeebpms
   - org.openrewrite.maven.ChangePropertyValue:
       key: version.eximeebpms
-      newValue: 1.3.0
+      newValue: 1.4.0
 
   - org.openrewrite.maven.RenamePropertyKey:
       oldKey: version.camunda.bpm.assert
       newKey: version.eximeebpms.bpm.assert
   - org.openrewrite.maven.ChangePropertyValue:
       key: version.eximeebpms.bpm.assert
-      newValue: 1.3.0
+      newValue: 1.4.0
 
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
@@ -60,11 +60,6 @@ recipeList:
       oldArtifactId: camunda-bpmn-model
       newGroupId: org.eximeebpms.bpm.model
       newArtifactId: eximeebpms-bpmn-model
-  - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
-      oldGroupId: org.camunda.bpm.model
-      oldArtifactId: camunda-cmmn-model
-      newGroupId: org.eximeebpms.bpm.model
-      newArtifactId: eximeebpms-cmmn-model
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.juel
       oldArtifactId: camunda-juel
@@ -159,7 +154,7 @@ recipeList:
       oldGroupId: org.camunda.spin
       oldArtifactId: camunda-spin-dataformat-xml-dom
       newGroupId: org.eximeebpms.spin
-      newArtifactId: eximeebpms-spin-dataformat-xml-dom
+      newArtifactId: eximeebpms-spin-dataformat-xml-dom-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-plugins
@@ -469,17 +464,17 @@ recipeList:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-core
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-rest-core
+      newArtifactId: eximeebpms-engine-rest-core-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-rest
+      newArtifactId: eximeebpms-engine-rest-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.example
       oldArtifactId: camunda-example-invoice
       newGroupId: org.eximeebpms.bpm.example
-      newArtifactId: eximeebpms-example-invoice
+      newArtifactId: eximeebpms-example-invoice-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.qa
       oldArtifactId: camunda-qa-integration-tests-webapps-root
@@ -509,7 +504,7 @@ recipeList:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-ejb-client
       newGroupId: org.eximeebpms.bpm.javaee
-      newArtifactId: eximeebpms-ejb-client
+      newArtifactId: eximeebpms-ejb-client-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-jobexecutor-rar
@@ -559,7 +554,7 @@ recipeList:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-cdi
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-cdi
+      newArtifactId: eximeebpms-engine-cdi-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-cdi-compatibility-root
@@ -569,7 +564,7 @@ recipeList:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-spring
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-spring
+      newArtifactId: eximeebpms-engine-spring-6
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-spring-compatibility-root
@@ -594,7 +589,7 @@ recipeList:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp
       newGroupId: org.eximeebpms.bpm.webapp
-      newArtifactId: eximeebpms-webapp
+      newArtifactId: eximeebpms-webapp-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.jboss
       oldArtifactId: camunda-jboss
@@ -624,7 +619,7 @@ recipeList:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp-tomcat
       newGroupId: org.eximeebpms.bpm.webapp
-      newArtifactId: eximeebpms-webapp-tomcat
+      newArtifactId: eximeebpms-webapp-tomcat-jakarta
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.run
       oldArtifactId: camunda-bpm-run-root
@@ -729,17 +724,17 @@ recipeList:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26
       newGroupId: org.eximeebpms.bpm.wildfly
-      newArtifactId: eximeebpms-wildfly26
+      newArtifactId: eximeebpms-wildfly
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26-subsystem
       newGroupId: org.eximeebpms.bpm.wildfly
-      newArtifactId: eximeebpms-wildfly26-subsystem
+      newArtifactId: eximeebpms-wildfly-subsystem
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26-modules
       newGroupId: org.eximeebpms.bpm.wildfly
-      newArtifactId: eximeebpms-wildfly26-modules
+      newArtifactId: eximeebpms-wildfly-modules
   - org.openrewrite.maven.ChangeManagedDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.assert
       oldArtifactId: camunda-bpm-assert
@@ -787,11 +782,6 @@ recipeList:
       newGroupId: org.eximeebpms.bpm.model
       newArtifactId: eximeebpms-bpmn-model
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
-      oldGroupId: org.camunda.bpm.model
-      oldArtifactId: camunda-cmmn-model
-      newGroupId: org.eximeebpms.bpm.model
-      newArtifactId: eximeebpms-cmmn-model
-  - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.juel
       oldArtifactId: camunda-juel
       newGroupId: org.eximeebpms.bpm.juel
@@ -885,7 +875,7 @@ recipeList:
       oldGroupId: org.camunda.spin
       oldArtifactId: camunda-spin-dataformat-xml-dom
       newGroupId: org.eximeebpms.spin
-      newArtifactId: eximeebpms-spin-dataformat-xml-dom
+      newArtifactId: eximeebpms-spin-dataformat-xml-dom-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-plugins
@@ -1195,17 +1185,17 @@ recipeList:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest-core
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-rest-core
+      newArtifactId: eximeebpms-engine-rest-core-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-rest
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-rest
+      newArtifactId: eximeebpms-engine-rest-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.example
       oldArtifactId: camunda-example-invoice
       newGroupId: org.eximeebpms.bpm.example
-      newArtifactId: eximeebpms-example-invoice
+      newArtifactId: eximeebpms-example-invoice-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.qa
       oldArtifactId: camunda-qa-integration-tests-webapps-root
@@ -1235,7 +1225,7 @@ recipeList:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-ejb-client
       newGroupId: org.eximeebpms.bpm.javaee
-      newArtifactId: eximeebpms-ejb-client
+      newArtifactId: eximeebpms-ejb-client-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.javaee
       oldArtifactId: camunda-jobexecutor-rar
@@ -1285,7 +1275,7 @@ recipeList:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-cdi
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-cdi
+      newArtifactId: eximeebpms-engine-cdi-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-cdi-compatibility-root
@@ -1295,7 +1285,7 @@ recipeList:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-engine-spring
       newGroupId: org.eximeebpms.bpm
-      newArtifactId: eximeebpms-engine-spring
+      newArtifactId: eximeebpms-engine-spring-6
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm
       oldArtifactId: camunda-spring-compatibility-root
@@ -1320,7 +1310,7 @@ recipeList:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp
       newGroupId: org.eximeebpms.bpm.webapp
-      newArtifactId: eximeebpms-webapp
+      newArtifactId: eximeebpms-webapp-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.jboss
       oldArtifactId: camunda-jboss
@@ -1350,7 +1340,7 @@ recipeList:
       oldGroupId: org.camunda.bpm.webapp
       oldArtifactId: camunda-webapp-tomcat
       newGroupId: org.eximeebpms.bpm.webapp
-      newArtifactId: eximeebpms-webapp-tomcat
+      newArtifactId: eximeebpms-webapp-tomcat-jakarta
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.run
       oldArtifactId: camunda-bpm-run-root
@@ -1455,17 +1445,17 @@ recipeList:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26
       newGroupId: org.eximeebpms.bpm.wildfly
-      newArtifactId: eximeebpms-wildfly26
+      newArtifactId: eximeebpms-wildfly
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26-subsystem
       newGroupId: org.eximeebpms.bpm.wildfly
-      newArtifactId: eximeebpms-wildfly26-subsystem
+      newArtifactId: eximeebpms-wildfly-subsystem
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.wildfly
       oldArtifactId: camunda-wildfly26-modules
       newGroupId: org.eximeebpms.bpm.wildfly
-      newArtifactId: eximeebpms-wildfly26-modules
+      newArtifactId: eximeebpms-wildfly-modules
   - org.openrewrite.maven.ChangeDependencyGroupIdAndArtifactId:
       oldGroupId: org.camunda.bpm.assert
       oldArtifactId: camunda-bpm-assert
