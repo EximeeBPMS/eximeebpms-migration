@@ -16,7 +16,7 @@ add this snippet to your maven pom.xml:
                 <plugin>
                     <groupId>org.openrewrite.maven</groupId>
                     <artifactId>rewrite-maven-plugin</artifactId>
-                    <version>6.42.0</version>
+                    <version>6.46.1</version>
                     <configuration>
                         <configLocation>
                             ${maven.multiModuleProjectDirectory}/replace-camunda-with-eximeebpms.yml
