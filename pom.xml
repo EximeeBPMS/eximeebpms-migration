@@ -2,16 +2,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.example.bpm.getstarted</groupId>
-    <artifactId>loanapproval-spring</artifactId>
+    <groupId>org.eximeebpms.migration</groupId>
+    <artifactId>eximeebpms-migration</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <properties>
         <camunda.version>7.24.0</camunda.version>
-        <spring.version>7.0.8</spring.version>
-        <h2.version>2.4.240</h2.version>
-        <slf4j.version>2.0.18</slf4j.version>
+        <spring.version>7.0.9</spring.version>
+        <h2.version>2.5.252</h2.version>
+        <slf4j.version>2.0.20</slf4j.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
     </properties>
@@ -87,7 +87,7 @@
                 <plugin>
                     <groupId>org.openrewrite.maven</groupId>
                     <artifactId>rewrite-maven-plugin</artifactId>
-                    <version>6.44.0</version>
+                    <version>6.46.1</version>
                     <configuration>
                         <configLocation>
                             ${maven.multiModuleProjectDirectory}/replace-camunda-with-eximeebpms.yml
